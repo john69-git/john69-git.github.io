@@ -24,7 +24,7 @@ export const profile = {
     eyebrow: 'Welcome to my corner of the internet',
     greeting: "Hey, I'm",
     intro:
-      "Computer Engineering student, technology enthusiast, and someone who's always curious about what I can create.",
+      "Computer Engineering student at ICCT Cainta main campus, technology enthusiast, and someone who's always curious about what I can create.",
     tagline: 'Learning, building, and becoming.',
   },
 
@@ -32,7 +32,7 @@ export const profile = {
     intro:
       "I'm a Computer Engineering student exploring the intersection of software, hardware, and technology. I enjoy learning new things, experimenting with ideas, and turning what I learn into projects. I'm still growing, and every project gives me another opportunity to improve.",
 
-    /** Your story, in your own words. Empty chapters are hidden on the live site. */
+    
     chapters: [
       {
         title: 'Who I am',
