@@ -66,6 +66,8 @@ export interface Project {
   status?: ProjectStatus
   summary: string
   purpose: string
+  /** Optional list of main features, shown in the project pop-up. */
+  features?: string[]
   technologies: string[]
   role: string
   contributions: string[]

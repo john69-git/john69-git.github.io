@@ -17,7 +17,7 @@ export const skillGroups: SkillGroup[] = [
     title: 'Programming',
     icon: SquareTerminal,
     skills: [
-      { name: 'Dart', level: 'learning' },
+      { name: 'Dart', level: 'building' },
       { name: 'Python', level: 'learning' },
     ],
   },
@@ -25,8 +25,9 @@ export const skillGroups: SkillGroup[] = [
     title: 'Application Development',
     icon: Smartphone,
     skills: [
-      { name: 'Flutter', level: 'learning' },
-      { name: 'Mobile app development', level: 'learning' },
+      { name: 'Flutter', level: 'building' },
+      { name: 'Mobile app development', level: 'building' },
+      { name: 'Databases (Firebase, Supabase)', level: 'building' },
     ],
   },
   {

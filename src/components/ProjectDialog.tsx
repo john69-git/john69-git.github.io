@@ -96,6 +96,19 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
               </Block>
             )}
 
+            {project.features && project.features.length > 0 && (
+              <Block title="Key features">
+                <ul className="grid gap-2 sm:grid-cols-2">
+                  {project.features.map((f) => (
+                    <li key={f} className="flex gap-3 rounded-xl border border-line bg-ink-900/60 p-3 text-sm">
+                      <span aria-hidden className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </Block>
+            )}
+
             {(project.role || project.contributions.length > 0) && (
               <Block title="My role & contributions">
                 {project.role && <p>{project.role}</p>}

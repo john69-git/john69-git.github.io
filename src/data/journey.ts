@@ -23,6 +23,12 @@ export const milestones: Milestone[] = [
     status: 'now',
   },
   {
+    title: 'Built iSEEKct with my team',
+    description: 'Completed a lost-and-found mobile app, where I handled both the front end and the back end.',
+    status: 'done',
+    date: '2nd year',
+  },
+  {
     title: 'Getting hands-on with hardware',
     description: 'Experimenting with Arduino, sensors, and electronics.',
     status: 'now',
