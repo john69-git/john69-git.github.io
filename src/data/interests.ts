@@ -1,10 +1,7 @@
 import { Brain, Code2, Cpu, Lightbulb, Monitor, Sparkles } from 'lucide-react'
 import type { Interest } from './types'
 
-/* ==================================================================
-   INTERESTS — add, remove, or reorder freely.
-   Icons: pick any from https://lucide.dev/icons and import it above.
-   ================================================================== */
+
 
 export const interests: Interest[] = [
   {

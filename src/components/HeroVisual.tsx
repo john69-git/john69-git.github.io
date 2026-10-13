@@ -4,13 +4,18 @@ import { NightLandscape } from './NightLandscape'
 
 /** The framed artwork beside the hero text: your photo if set, otherwise an animated night landscape. */
 export function HeroVisual() {
-  const { photo, nickname, nicknameJp, location } = profile
+  const { photo, nickname, fullName, nicknameJp, location } = profile
 
   return (
     <div className="relative mx-auto w-full max-w-md lg:max-w-none">
       <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-line bg-ink-850 shadow-[0_40px_120px_-40px_rgb(91_140_255/0.35)]">
         {photo ? (
-          <img src={photo} alt={`Photo of ${nickname}`} className="absolute inset-0 h-full w-full object-cover" />
+          <img
+            src={photo}
+            alt={`Photo of ${fullName || nickname}`}
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover object-top brightness-[0.9] saturate-[0.9]"
+          />
         ) : (
           <NightLandscape />
         )}

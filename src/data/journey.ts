@@ -10,7 +10,7 @@ export const milestones: Milestone[] = [
   {
     title: 'Started my Computer Engineering journey',
     description: 'Began studying Computer Engineering, where software, hardware, and curiosity meet.',
-    status: 'done',
+    status: 'now',
   },
   {
     title: 'Building programming foundations',
@@ -35,4 +35,4 @@ export const milestones: Milestone[] = [
 ]
 
 /** Future goals. Add your own; this block is hidden on the live site while empty. */
-export const futureGoals: string[] = []
+export const futureGoals: string[] = ['To use the tools I have to become competent in this field.']

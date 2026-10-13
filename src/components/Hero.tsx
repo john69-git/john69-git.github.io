@@ -3,7 +3,7 @@ import { profile } from '../data/profile'
 import { HeroVisual } from './HeroVisual'
 
 export function Hero() {
-  const { hero, nickname, role, location } = profile
+  const { hero, nickname, fullName, role, location } = profile
 
   return (
     <section
@@ -30,6 +30,13 @@ export function Hero() {
           >
             {hero.greeting} <span className="text-gradient">{nickname}</span>.
           </h1>
+
+          {fullName && (
+            <p className="mt-4 flex items-center gap-3 font-display text-lg tracking-wide text-fg/80 sm:text-xl">
+              <span aria-hidden className="h-px w-6 bg-accent/60" />
+              {fullName}
+            </p>
+          )}
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{hero.intro}</p>
 

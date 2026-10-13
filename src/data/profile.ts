@@ -8,8 +8,9 @@ import type { NavLink, SocialLink, StoryChapter } from './types'
 
 export const profile = {
   nickname: 'HAISE',
-  /** Small Japanese-katakana signature used as a design accent. Set to '' to remove. */
   nicknameJp: 'ハイセ',
+  /** Your real name. Shown under the hero heading and on the About card. Set to '' to hide. */
+  fullName: 'John Jerick Bernardo Barrios',
   role: 'Computer Engineering Student',
   location: 'Philippines',
 
@@ -17,7 +18,7 @@ export const profile = {
    * Optional photo of you. Put the file in /public/images and write e.g. 'images/me.jpg'.
    * While empty, the site shows abstract artwork instead (never a fake portrait).
    */
-  photo: '',
+  photo: 'images/me.jpg',
 
   hero: {
     eyebrow: 'Welcome to my corner of the internet',
@@ -36,27 +37,27 @@ export const profile = {
       {
         title: 'Who I am',
         prompt: 'Your personality and the values you care about.',
-        text: '',
+        text: "I'm a curious problem-solver driven by continuous growth, precision, and a love for building meaningful tech.",
       },
       {
         title: 'Why Computer Engineering',
         prompt: 'What made you choose Computer Engineering?',
-        text: '',
+        text: "I'm fascinated by how hardware and software come together to turn logical ideas into physical systems.",
       },
       {
         title: 'What keeps me learning',
         prompt: 'What motivates you to keep learning and building?',
-        text: '',
+        text: 'The thrill of solving complex problems and turning raw code and circuits into functional tools.',
       },
       {
         title: 'Outside of class',
         prompt: 'Your interests and hobbies outside academics.',
-        text: '',
+        text: 'I enjoy exploring 2D/3D design, working on personal dev projects, riding, and watching Ghibli films.',
       },
       {
         title: 'Where I want to go',
         prompt: 'Your goals for the future.',
-        text: '',
+        text: 'I want to become a skilled engineer who builds smart, scalable systems that solve real-world problems.',
       },
     ] satisfies StoryChapter[],
   },

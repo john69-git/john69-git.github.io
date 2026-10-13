@@ -1,7 +1,6 @@
 import { Clapperboard, Music2, Quote, Sparkles } from 'lucide-react'
 import { profile } from '../data/profile'
 import { LogoMark } from './Logo'
-import { Placeholder } from './Placeholder'
 
 const favoriteGroups = [
   { key: 'music', label: 'Music', icon: Music2 },
@@ -10,7 +9,7 @@ const favoriteGroups = [
 ] as const
 
 export function ProfileCard() {
-  const { nickname, nicknameJp, role, location, photo, quote, favorites } = profile
+  const { nickname, nicknameJp, fullName, role, location, photo, quote, favorites } = profile
   const filledFavorites = favoriteGroups.filter((g) => favorites[g.key].length > 0)
 
   return (
@@ -22,7 +21,12 @@ export function ProfileCard() {
 
       <div className="relative flex items-center gap-4">
         {photo ? (
-          <img src={photo} alt={`Photo of ${nickname}`} className="size-16 rounded-2xl border border-line-strong object-cover" />
+          <img
+            src={photo}
+            alt={`Photo of ${fullName || nickname}`}
+            loading="lazy"
+            className="size-16 shrink-0 rounded-2xl border border-line-strong object-cover object-[60%_38%]"
+          />
         ) : (
           <div className="relative grid size-16 place-items-center rounded-2xl border border-line-strong bg-ink-900">
             <LogoMark className="size-9" />
@@ -38,6 +42,7 @@ export function ProfileCard() {
               </span>
             )}
           </p>
+          {fullName && <p className="text-sm text-fg/80">{fullName}</p>}
           <p className="text-sm text-muted">{role}</p>
           <p className="text-sm text-muted">{location}</p>
         </div>
@@ -53,7 +58,7 @@ export function ProfileCard() {
         </figure>
       )}
 
-      {filledFavorites.length > 0 ? (
+      {filledFavorites.length > 0 && (
         <dl className="relative mt-8 space-y-4 border-t border-line pt-6">
           {filledFavorites.map(({ key, label, icon: Icon }) => (
             <div key={key} className="flex gap-3">
@@ -65,12 +70,6 @@ export function ProfileCard() {
             </div>
           ))}
         </dl>
-      ) : (
-        <div className="relative mt-8">
-          <Placeholder file="src/data/profile.ts → favorites">
-            Add your favorite music, anime, or inspirations, and they'll appear here.
-          </Placeholder>
-        </div>
       )}
     </aside>
   )
