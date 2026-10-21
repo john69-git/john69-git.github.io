@@ -1,0 +1,8 @@
+import { motion, useScroll, useSpring } from 'motion/react'
+
+/** A thin crimson line across the top that fills as you read. */
+export function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 30, restDelta: 0.001 })
+  return <motion.div aria-hidden className="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left bg-crimson" style={{ scaleX }} />
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- ===== SEO ===== -->
+    <title>HAISE (John Jerick Bernardo Barrios) — Computer Engineering Student</title>
+    <meta
+      name="description"
+      content="HAISE — the personal portfolio of John Jerick Bernardo Barrios, a Computer Engineering student from the Philippines exploring the intersection of technology, creativity, and purposeful design."
+    />
+    <meta name="author" content="John Jerick Bernardo Barrios" />
+    <meta name="theme-color" content="#100E11" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="https://john69-git.github.io/" />
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HAISE" />
+    <meta property="og:url" content="https://john69-git.github.io/" />
+    <meta property="og:title" content="HAISE — Between Logic and Imagination" />
+    <meta
+      property="og:description"
+      content="The personal portfolio of HAISE (John Jerick Bernardo Barrios), a Computer Engineering student from the Philippines."
+    />
+    <meta property="og:image" content="https://john69-git.github.io/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Apply the saved theme before first paint (prevents a light/dark flash). -->
+    <script>
+      ;(function () {
+        var theme = 'dark'
+        try {
+          var saved = localStorage.getItem('haise-theme')
+          if (saved === 'light' || saved === 'dark') theme = saved
+        } catch (e) {}
+        document.documentElement.setAttribute('data-theme', theme)
+      })()
+    </script>
+
+    <!-- Hero avatar is the largest above-the-fold image -->
+    <link rel="preload" as="image" href="/images/avatar-haise.webp" type="image/webp" />
+
+    <!-- Fonts: Shippori Mincho B1 (headings — Japanese mincho serif), Zen Kaku Gothic New (text & labels), JetBrains Mono (code chips);
+         Bodoni Moda + Inter are used only in the footer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;500&display=swap"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Jerick Bernardo Barrios",
+        "alternateName": "HAISE",
+        "url": "https://john69-git.github.io/",
+        "description": "Computer Engineering student from the Philippines",
+        "sameAs": ["https://github.com/john69-git"],
+        "knowsAbout": ["Computer Engineering", "Software Development", "Mobile Applications", "Web Development", "UI/UX Design"]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p style="padding: 2rem; font-family: Georgia, serif; color: #f1eee8; background: #100e11">
+        HAISE — John Jerick Bernardo Barrios, Computer Engineering student. Please enable JavaScript to view the portfolio.
+      </p>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
